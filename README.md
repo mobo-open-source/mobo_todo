@@ -67,7 +67,7 @@ Mobo Todo is built using modern technologies to ensure reliability and performan
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/mobo-suite/mobo_todo.git
+   git clone https://github.com/mobo-open-source/mobo_todo.git
    cd mobo_todo
    ```
 
