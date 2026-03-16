@@ -18,6 +18,7 @@ import 'package:mobo_todo/features/addTask%20screen/provider/tag_provider.dart';
 import 'package:mobo_todo/features/addTask%20screen/provider/add_task_provider.dart';
 import 'package:mobo_todo/features/task%20screen/provider/task_details_provider.dart';
 import 'package:mobo_todo/features/task%20screen/provider/task_provider.dart';
+import 'package:mobo_todo/core/globalkey/global_keys.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
     return Consumer<ThemeProvider>(
       builder: (context, provider, child) {
         return MaterialApp(
+          scaffoldMessengerKey: scaffoldMessengerKey,
           debugShowCheckedModeBanner: false,
           title: 'Mobo todo App',
           theme: AppTheme.lightTheme,
