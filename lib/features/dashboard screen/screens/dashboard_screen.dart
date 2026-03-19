@@ -19,6 +19,7 @@ import 'package:mobo_todo/features/addTask%20screen/screens/add_task_screen.dart
 import 'package:mobo_todo/core/utils/color_constants.dart';
 import 'package:mobo_todo/core/widget/task_count_widget.dart';
 import 'package:mobo_todo/core/widget/task_overview_widget.dart';
+import 'package:mobo_todo/shared/services/review_service.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -55,6 +56,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
         context,
         listen: false,
       ).initActivityData(service);
+      await ReviewService().trackAppOpen();
+      if (context.mounted) {
+        ReviewService().checkAndShowRating(context);
+      }
     });
   }
 
